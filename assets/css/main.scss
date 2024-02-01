@@ -1,34 +1,16 @@
----
-# Do not remove the triple dashes
----
 @charset "utf-8";
 
 //
 // Set color scheme
 //
-
-{% if site.color_scheme == "one" %}
-  $color: #17baef;
-  $color-2: #eebf3f;
-{% elsif site.color_scheme == "two" %}
-  $color: #b4ca65;
-  $color-2: #dd7c4f;
-{% elsif site.color_scheme == "three" %}
   $color: #6690b9;
-  $color-2: #f46fa3;
-{% elsif site.color_scheme == "four" %}
-  $color: #50c8c9;
   $color-2: #ffbe57;
-{% else %}
-  $color: #6690b9;
-  $color-2: #dd9d71;
-{% endif %}
 
 //
 // Import partials from `_sass` folder
 //
 
-@import "default";
+@import "../_sass/default";
 
 //
 // Insert custom css below this line
@@ -79,7 +61,7 @@
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
     margin-right: 8px;
-    float: left;
+    //float: left;
 }
 .btn-outline, .btn-outline:link, .btn-outline:visited {
     background-color: transparent;

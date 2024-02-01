@@ -45,10 +45,6 @@ tinyletter_username:
 #Changing this next setting to 'true' will allow your site to be indexed by search engines (like Google)
 publish: true
 
-#COLOR SCHEME
-#Select one of the five color schemes (default, one, two, three, or four)
-color_scheme: default
-
 # *** DO NOT CHANGE ANYTHING BELOW THIS LINE ***
 
 # Unless you know what you're doing, no need to change anything below
