@@ -2,3 +2,4 @@ _site/
 .sass-cache/
 .idea/
 DELL/
+node_modules
