@@ -106,7 +106,7 @@
             <p>It takes only $15 USD / 1500 ETB to sponsor 1 child for a month. The children you sponsor will recieve one meal per day. Once you make your first donation, you will be provided with status updates of your sponsored children and Halyot's budget every week. Pledge your sponsorship here and we will be in contact with you!</p>
             <p><em></em></p>
             <div id="mc_embed_signup">
-              <form action="https://script.google.com/macros/s/AKfycbxQ3V0_c0Ivy_aznQHTGUUbX7gUMfd7aNeVDFOuDHoh96gHAXXPXddPx7HqnupFxqrf/exec" method="POST" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate bs-component" target="_blank" novalidate>
+              <form name="submit-to-google-sheet" id="mc-embedded-subscribe-form" class="validate bs-component">
                 <div id="mc_embed_signup_scroll">
                   <div class="form-group">
                     <div class="row">
@@ -134,14 +134,30 @@
                   </div>
                   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                   <div style="position: absolute; left: -5000px;"><input type="text" name="{{ site.mailchimp_spam_guard }}" tabindex="-1" value=""></div>
+                  <p id="thank-you-message">
+                    Thank you for contacting us. We will be in touch with you very soon.
+                  </p>
                   <div class="clear">
-    
                     <input type="submit" value="Join Us!" name="subscribe" id="mc-embedded-subscribe" class="button btn-success btn-block btn" />
                   </div>
                 </div>
               </form>
+
+              <script>
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbxQ3V0_c0Ivy_aznQHTGUUbX7gUMfd7aNeVDFOuDHoh96gHAXXPXddPx7HqnupFxqrf/exec'
+                const form = document.forms['submit-to-google-sheet']
+              
+                form.addEventListener('submit', e => {
+                  const thankYouMessage = document.querySelector('#thank-you-message');
+                  e.preventDefault()
+                  thankYouMessage.classList.add('show');
+                  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                    .then(response => console.log('Success!', response))
+                    .catch(error => console.error('Error!', error.message));
+                  form.reset()
+                })
+              </script>
             </div>
-            <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
             <!--End mc_embed_signup-->
     
             <!--form style="padding:3px;text-align:center;" action="https://tinyletter.com/{{ site.tinyletter_username }}" method="post" target="popupwindow" onsubmit="window.open('https://tinyletter.com/{{ site.tinyletter_username }}', 'popupwindow', 'scrollbars=yes,width=800,height=600');return true"><p><label for="tlemail">Subscribe to Updates</label></p><p><input type="text" style="width:140px" name="email" id="tlemail" data-behavior="placeholder" placeholder="Email Address" /></p><input type="hidden" value="1" name="embed"/><input type="submit" value="Subscribe" /><p></p></form-->

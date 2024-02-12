@@ -94,3 +94,19 @@
 .features .form-inline {
   margin-top: 10px;
 }
+
+#thank-you-message {
+  display: none;
+}
+
+#thank-you-message.show {
+  display: block;
+}
+
+#error-message {
+  display: none;
+}
+
+#error-message.show {
+  display: block;
+}

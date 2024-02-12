@@ -37,10 +37,25 @@ import { Amplify } from 'aws-amplify';
 Amplify.configure({
   API: {
     GraphQL: {
-      endpoint: 'https://hwpdfqwegrawvoun3c5yxitqyi.appsync-api.us-east-1.amazonaws.com/graphql',
+      endpoint: 'https://behyvavbnfggtdgdtvicoq5xqu.appsync-api.us-east-1.amazonaws.com/graphql',
       region: 'us-east-1',
       defaultAuthMode: 'apiKey',
-      apiKey: 'da2-l7p7j2blwrhftgoytscb4vn45a'
+      apiKey: 'da2-xpa6glxnqjaexe5gupd7krcgae'
     }
   }
 });
+
+import { PledgersCreateForm } from './ui-components';
+import { ThemeProvider } from "@aws-amplify/ui-react";
+import { Amplify } from 'aws-amplify';
+import awsconfig from './aws-exports';
+import "@aws-amplify/ui-react/styles.css";
+import { studioTheme } from "./ui-components";
+Amplify.configure(awsconfig);
+function submitForm() {
+    // but duplicate names are possible in HTML Therefore enforce the correct index
+    var frm = document.getElementsByName('submit-to-google-sheet')[0];
+    frm.submit(); // Submit the form
+    frm.reset();  // Reset all form data
+    return false; // Prevent page refresh
+ }
