@@ -18,10 +18,47 @@
     <!-- Theme CSS -->
     <link rel="stylesheet" href="assets/css/main.css">
     <!-- Scripts-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
     <script type="text/javascript" src="assets/js/main.js"></script>
+
+    <script>
+      jQuery(document).ready(function($) {
+
+      /* ======= Scrollspy ======= */
+      $('body').scrollspy({ target: '#header', offset: 400});
+
+      /* ======= Fixed header when scrolled ======= */
+
+      $(window).bind('scroll', function() {
+          if ($(window).scrollTop() > 50) {
+              $('#header').addClass('navbar-fixed-top');
+          }
+          else {
+              $('#header').removeClass('navbar-fixed-top');
+          }
+      });
+
+      /* ======= ScrollTo ======= */
+      $('a.scrollto').on('click', function(e){
+
+          //store hash
+          var target = this.hash;
+
+          e.preventDefault();
+
+      $('body').scrollTo(target, 800, {offset: -70, 'axis':'y'});
+          //Collapse mobile menu after clicking
+      if ($('.navbar-collapse').hasClass('in')){
+        $('.navbar-collapse').removeClass('in').addClass('collapse');
+      }
+
+      });
+
+      });
+    </script>
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -51,8 +88,8 @@
               <li class="active nav-item sr-only"><a class="scrollto" href="#promo">Home</a></li>
               <li class="nav-item"><a class="scrollto" href="#about">About</a></li>
               <li class="nav-item"><a class="scrollto" href="#join">Join Us</a></li>
-              <li class="nav-item"><a class="scrollto" href="#contact">Contact</a></li>
-              <li class="nav-item last"><a class="scrollto highlight" href="#donate">Donate</a></li>
+              <li class="nav-item"><a class="scrollto" href="#donate">Donate</a></li>
+              <li class="nav-item last"><a class="scrollto" href="#contact">Contact</a></li>
             </ul><!--//nav-->
           </div><!--//navabr-collapse-->
         </nav><!--//main-nav-->
@@ -88,7 +125,7 @@
             <li><a href="https://drive.google.com/drive/folders/1Y0jvgJELS5Jk_YJxgzaFmUGf3NZh1JL8?usp=sharing" target="_blank"><i>Videos and Photos</i></a></li>
             <li><a href="https://docs.google.com/spreadsheets/d/1WZYq6E_AENVPSnO9hPevuBwUmw4d77_PlGUqKzwX6us/edit?usp=sharing" target="_blank"><i>Financial Report</i></a></li>
             <li><a href="https://drive.google.com/drive/folders/16lJsLGwPfKlCIylzy7_EHSB6Ui6bc0Ot?usp=sharing"><i>Other resources</i></a></li>
-            <li class="last"><a href="mailto:Halyot.feeds@gmail.com">Email us<i class="fa fa-envelope"></i></a></li>
+            <li class="last"><a href="mailto:Halyot.feeds@gmail.com">Email us</a></li>
           </ul>
         </div>
       
@@ -170,81 +207,56 @@
     
     <!-- ******DONATE****** -->
     <section id="donate" class="donate section text-center">
-      <div class="container">
-        <div class="donate-inner">
-          <h2 class="title text-center">Donate</h2>
-          <div class="info">
-            <p><strong>Become a donor today.</strong><br>As a small grassroots organization, know that every dollar will have an immense impact on our ability to continue working towards our mission.</p>
-            </div>
-              <div class="donorbox text-center">
-                <iframe src="https://donorbox.org/embed/{{ site.donorbox_campaign_name }}" height="600px" width="100%" style="max-width:500px; min-width:310px" seamless="seamless" name="donorbox" frameborder="0" scrolling="no"></iframe>
-              </div>
-              {% if site.is_501c3 == true %}
-                <p>Contributions are tax deductible to the extent permitted by law.<br>{{ site.org_name }} is a 501(c)(3) organization.</p>
-              {% elsif site.fiscal_sponsor_name %}
-                <p>{{ site.org_name }} is fiscally sponsored by {{ site.fiscal_sponsor_name }}, a 501 (c)(3) tax exempt non-profit organization.</p>
-              {% endif %}
-            {% else %}
-            <div class="donorbox text-center">
-            </div>
-            <hr>
-            <p class="text-warning">Sorry, online donations are not available at this time <i class="fa fa-frown-o"></i></p>
-            <hr>
-            {% endif %}
-          </div><!--//info-->
-          <div class="cta-container">
-            <div class="speech-bubble">
-              <p class="intro">Your support means the world to us :)</p>
-              <div class="icon-holder  text-center"><i class="fa fa-smile-o"></i></div>
-            </div><!--//speech-bubble-->
-            <div class="btn-container  text-center">
-              <!--//You need to generate your own PayPal button if you choose to use Paypal - https://www.paypal.com/us/cgi-bin/?cmd=_donate-intro-outside -->
-              <!--PayPal generated code starts-->
-                  <!--form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                  <input type="hidden" name="cmd" value="_s-xclick">
-                  <input type="hidden" name="hosted_button_id" value="{{ site.paypal_button_id }}">
-                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                  <img alt="" border="0" src="https://www.paypalobjects.com/en_GB/i/scr/pixel.gif" width="1" height="1">
-                </form-->
-                <!--//PayPal generated code ends-->
-    
-            </div><!--//btn-container-->
-          </div><!--//cta-container-->
-        </div><!--//donate-inner-->
-      </div><!--//container-->
+      <h2 class="title text-center">Donate</h2>
+      <div class="info">
+        <p><strong>Become a donor today.</strong><br>As a small grassroots organization, know that every dollar will have an immense impact on our ability to continue working towards our mission.</p>
+        <p>Contributions Can be made via direct bank deposit or Zelle.</p>
+        <br>
+        <p>
+          <strong>Bank account information</strong>
+          <br>
+          Commercial Bank of Ethiopia, account # 1000576436525
+          <br>
+          Wegagen Bank, account # 5000398830101
+          <br>
+          Zelle (Selam Tsegaye), 404-630-8100
+          <br>
+          Zelle (Tsigeweyni), 678-333-5374
+        
+        </p>
+        <hr>
+        <p class="text-warning">Sorry, online donations are not available at this time <i class="fa fa-frown-o"></i></p>
+        <hr>
+      </div><!--//info-->
+      <div class="speech-bubble">
+        <p class="intro">Your support means the world to us.</p>
+        <div class="icon-holder  text-center"><i class="fa fa-smile-o"></i></div>
+      </div><!--//speech-bubble-->
     </section><!--//how-->
-    
+
     <!-- ******CONTACT****** -->
     <section id="contact" class="contact section has-pattern">
       <div class="container">
         <div class="contact-inner">
-          <h2 class="title  text-center">Contact</h2>
+          <h2 class="title  text-center">Contact Us</h2>
           <address class="text-center">
-            <strong>{{ site.org_name }}</strong><br>
-            {% if site.org_street_address %}{{ site.org_street_address }},&nbsp;{% endif %}{% if site.org_address_suite %}{{ site.org_address_suite }}<br>{% endif %}
-            {% if site.org_city %}{{ site.org_city }},&nbsp;{% endif %}{% if site.org_state %}{{ site.org_state }}&nbsp;{% endif %}{% if site.org_zip %}{{ site.org_zip }}{% endif %}<br>
-            {% if site.org_phone %}
-            <abbr title="Phone">P:</abbr> {{ site.org_phone }}
-            {% endif %}
+            <strong>Halyot</strong><br>
+            Email
+            <br>
+            halyot.feeds@gmail.com
+            <br>
+            ETHIOPIA : Phone Number
+            <br>
+            0979-82-86-63 OR 0911-20-41-81
+            <br>
+            US : Phone Number
+            <br>
+            678-333-5374 OR 404-630-8100
+            <br>
+            <br>
+            we are commited to providing monthly budget and expense reports for our donors.
           </address>
           <div class="clearfix"></div>
-          <div class="info text-center">
-            <h4 class="sub-title">Get Connected</h4>
-            <ul class="social-icons list-inline">
-            {% if site.twitter_username %}
-            <li><a href="https://twitter.com/{{ site.org_twitter_username }}" target="_blank"><i class="fa fa-twitter"></i></a></li>
-            {% endif %}
-            {% if site.facebook_username %}
-            <li><a href="https://www.facebook.com/{{ site.org_facebook_username }}" target="_blank"><i class="fa fa-facebook"></i></a></li>
-            {% endif %}
-            {% if site.instagram_username %}
-            <li><a href="http://instagram.com/{{ site.org_instagram_username }}"><i class="fa fa-instagram"></i></a></li>
-            {% endif %}
-            {% if site.org_general_email_inbox %}
-            <li class="last"><a href="mailto: {{ site.org_general_email_inbox }}"><i class="fa fa-envelope"></i></a></li>
-            {% endif %}
-          </ul>
-          </div><!--//info-->
         </div><!--//contact-inner-->
       </div><!--//container-->
     </section><!--//contact-->  
