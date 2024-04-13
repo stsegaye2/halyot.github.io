@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+  <!-- ******HEADER****** -->
+  <head>
+    <title>HALYOT</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% if site.summary %}{{ site.summary | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | strip_html | strip_newlines | truncate: 160 }}{% endif %}">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="assets/css/main.css">
+    <!-- Scripts-->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+    <script type="text/javascript" src="assets/js/main.js"></script>
+
+    <script>
+      jQuery(document).ready(function($) {
+
+      /* ======= Scrollspy ======= */
+      $('body').scrollspy({ target: '#header', offset: 400});
+
+      /* ======= Fixed header when scrolled ======= */
+
+      $(window).bind('scroll', function() {
+          if ($(window).scrollTop() > 50) {
+              $('#header').addClass('navbar-fixed-top');
+          }
+          else {
+              $('#header').removeClass('navbar-fixed-top');
+          }
+      });
+
+      /* ======= ScrollTo ======= */
+      $('a.scrollto').on('click', function(e){
+
+          //store hash
+          var target = this.hash;
+
+          e.preventDefault();
+
+      $('body').scrollTo(target, 800, {offset: -70, 'axis':'y'});
+          //Collapse mobile menu after clicking
+      if ($('.navbar-collapse').hasClass('in')){
+        $('.navbar-collapse').removeClass('in').addClass('collapse');
+      }
+
+      });
+
+      });
+    </script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body data-spy="scroll">
+    <header id="header" class="header">
+      <div class="container">
+        <h1 class="logo pull-left">
+          <a href="/">
+            <span class="logo-title">HALYOT</span>
+          </a>
+        </h1><!--//logo-->
+        <nav id="main-nav" class="main-nav navbar-right" role="navigation">
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button><!--//nav-toggle-->
+          </div><!--//navbar-header-->
+          <div class="navbar-collapse collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active nav-item sr-only"><a class="scrollto" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="scrollto" href="about.html">About Us</a></li>
+                <li class="nav-item"><a class="scrollto" href="join.html">Join Us</a></li>
+                <li class="nav-item"><a class="scrollto" href="transparency.html">Transparency</a></li>
+                <li class="nav-item last"><a class="scrollto" href="index.html#contact">Contact Us</a></li>
+            </ul><!--//nav-->
+          </div><!--//navabr-collapse-->
+        </nav><!--//main-nav-->
+      </div>
+    </header><!--//header-->
+    <!-- ******ABOUT****** -->
+    <section id="about" class="about section">
+      <div class="container">
+        <h2 class="title text-center">Our Story</h2>
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
+            <p class="intro text-center">
+              After the war, a few people (who are now part of our board) traveled to the region to check on their remaining family and friends that lived in Tigray. Among the many tragedies they noticed, the starvation of the children around them caught their attention. These people then went to the schools of the area and talked to teachers, and learned that it has been very hard for the students to focus on school or any other activities due to hunger. They learned that some children were even passing out during class and missing school days because they did not have the energy for the commute. In an effort to provide meals for these children, Halyot was born. 
+            </p>
+          </div>
+          <div class="col-sm-5 col-sm-offset-1 text-left text-left-sm">
+            <!-- PICTURES-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
+            <!-- PICTURES-->
+          </div>
+          <div class="col-sm-5 col-sm-offset-1 text-left text-left-sm">
+            <p class="intro text-center">
+              Halyot now has 4 locations, ___ volunteers on site, and provides 1 meal for each sponsored child every morning before they head to school. This way, children can go to school with full stomachs and learn, play, and be children again.
+            </p>
+          </div>
+        </div>
+      </div><!--//container-->
+    </section><!--//about-->
+
+    <section id="about" class="about section">
+      <div class="container">
+        <h2 class="title text-center">Our Children</h2>
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
+            <p class="intro text-center">
+              The children of Tigray have gone through many unimaginable tragedies in their short lives. The ones that survived the war with no physical trauma have been scarred mentally. Most of them have also had their families displaced, have had their families’ source of income destroyed, and/or have been orphaned
+            </p>
+          </div>
+          <div class="col-sm-5 col-sm-offset-1 text-left text-left-sm">
+            <!-- PICTURES-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
+            <!-- PICTURES-->
+          </div>
+          <div class="col-sm-5 col-sm-offset-1 text-left text-left-sm">
+            <p class="intro text-center">
+              Of course, Halyot’s ultimate dream would be to provide these children with all the necessary resources that will allow them to be healthy both physically and mentally, and to lead a happy and innocent childhood that every child deserves. However, the first step to that goal is to provide them with their basic needs, starting with food.
+            </p>
+          </div>
+        </div>
+      </div><!--//container-->
+    </section><!--//about-->
+    
+    <section id="about" class="about section">
+      <div class="container">
+        <h2 class="title text-center">Our Promise</h2>
+        <h3 class="text-center">Transparency</h3>
+        <p class="intro text-center">
+          We do not take your commitment to partner with us for granted. That is why we are committed to providing weekly financial reports of every donation and expenses. You will have the opportunity to know each child you sponsor by name. You will also have access to reach out to any of our team members if you have any questions about your donation
+        </p>
+        <br>
+        <h3  class="text-center"> Receptiveness </h3>
+        <p class="intro text-center">
+          At Halyot, we are a community! We are all here to partner with each other and do what is best for the children of Tigray. Once you partner with us, feel free to give suggestions on what can be better done. We are here to listen to your ideas and do better for the sake of the children.
+        </p>
+      </div><!--//container-->
+    </section><!--//about-->
+
+    <section id="about" class="about section">
+      <div class="container">
+        <h2 class="title text-center">Our Locations</h2>
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
+            <h4>Enda Selase</h4>
+            <p> feeds 300 children</p>
+          </div>
+          <div class="col-sm-5 col-sm-offset-1 text-left text-left-sm">
+            <h4>Enda Gebriel</h4>
+            <p> feeds 200 children</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
+            <h4>Adi Abun</h4>
+            <p> feeds 200 children</p>
+          </div>
+          <div class="col-sm-5 col-sm-offset-1 text-left text-left-sm">
+            <h4>Queen Sheba school</h4>
+            <p> feeds 500 children</p>
+          </div>
+          </div>
+        </div>
+      </div><!--//container-->
+    </section><!--//about-->
+
+    <section id="about" class="about section">
+      <div class="container">
+        <h2 class="title text-center">Our Board Members</h2>
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
+            <h4>Mr w</h4>
+            <p>role</p>
+          </div>
+          <div class="col-sm-5 col-sm-offset-1 text-left text-left-sm">
+            <h4>Mrs x</h4>
+            <p> role</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-5 col-sm-offset-1 text-right text-right-sm">
+            <h4>Mr Y</h4>
+            <p> role</p>
+          </div>
+          <div class="col-sm-5 col-sm-offset-1 text-left text-left-sm">
+            <h4>Ms Z</h4>
+            <p>role</p>
+          </div>
+          </div>
+        </div>
+      </div><!--//container-->
+    </section><!--//about-->
+    <section class="button section">
+      <div class="btns">
+        <a class="btn btn-outline btn-outline-medium" href="join.html" target="_blank">Partner with us!</a>
+      </div>
+    </section>
+
+      <!-- ******FOOTER****** -->
+    <footer class="footer">
+      <div class="container text-center">
+        <small class="copyright">A free, <a href="https://github.com/smartergiving/free-nonprofit-starter-website" target="_blank">open source</a> project from the folks at <a href="http://smartergiving.org" target="_blank">SmarterGiving</a></small><br>
+        <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a></small>
+      </div><!--//container-->
+    </footer><!--//footer-->  
+  </body>
+</html>
