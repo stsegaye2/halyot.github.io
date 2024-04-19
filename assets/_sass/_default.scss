@@ -334,14 +334,12 @@ pre code {
 }
 .about .intro {
   margin-top: 0;
+  color:  darken($color, 30%)  !important;
 }
 
 /* ======= Story Section ======= */
 .story {
   background: $smoky-white;
-}
-.story .intro {
-  color:  darken($color, 30%)  !important;
 }
 .story .title {
   color:  $color;
@@ -351,11 +349,81 @@ pre code {
 .children {
   background: $color-2;
 }
-.children .intro {
-  color:  darken($color, 30%)  !important;
-}
 .children .title {
   color:  $color;
+}
+
+/* ======= Locations Section ======= */
+.locations {
+  background: $smoky-white;
+}
+.locations .title {
+  color:  $color;
+}
+
+/* ======= Locations Section ======= */
+.locations {
+  background: $smoky-white;
+}
+.locations .title {
+  color:  $color;
+}
+
+/* ======= Promise Section ======= */
+.promise {
+  background: $color;
+}
+.promise .title {
+  color:  $color-2;
+}
+
+/* ======= Board Section ======= */
+.Board {
+  background: $smoky-white;
+}
+.Board .title {
+  color:  $color;
+}
+
+
+/* ======= Steps Sections ======= */
+.steps {
+  padding: 80px 0;
+  background-color: $smoky-white;
+}
+.steps .intro {
+  margin-top: 0;
+  color:  $color;
+}
+.steps .title {
+  color: $color-2;
+}
+
+/* ======= Join Sections ======= */
+.join {
+  padding: 80px 0;
+  background-color: $color-2;
+}
+.join .intro {
+  margin-top: 0;
+  color:  $color;
+}
+
+/* ======= Finance Sections ======= */
+.finance {
+  padding: 80px 0;
+  background-color: $color-2;
+}
+
+
+.join .intro {
+  margin-top: 0;
+}
+
+/* ======= Documents Section ======= */
+.documents {
+  padding: 80px 0;
+  background-color: $color-2;
 }
 
 /* ======= Docs Section ======= */
@@ -398,10 +466,10 @@ pre code {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
+
 /* ======= Donate Section ======= */
 .donate {
-  padding: 80px 0;
-  background: $smoky-white;
+  padding: 40px 0;
 }
 .donate .title {
   margin-top: 0;

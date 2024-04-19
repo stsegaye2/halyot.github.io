@@ -390,15 +390,12 @@ pre code {
 
 .about .intro {
   margin-top: 0;
+  color: #2a435c !important;
 }
 
 /* ======= Story Section ======= */
 .story {
   background: #f5f5f5;
-}
-
-.story .intro {
-  color: #2a435c !important;
 }
 
 .story .title {
@@ -410,12 +407,86 @@ pre code {
   background: #ffbe57;
 }
 
-.children .intro {
-  color: #2a435c !important;
+.children .title {
+  color: #6690b9;
 }
 
-.children .title {
-  color: #f5f5f5;
+/* ======= Locations Section ======= */
+.locations {
+  background: #f5f5f5;
+}
+
+.locations .title {
+  color: #6690b9;
+}
+
+/* ======= Locations Section ======= */
+.locations {
+  background: #f5f5f5;
+}
+
+.locations .title {
+  color: #6690b9;
+}
+
+/* ======= Promise Section ======= */
+.promise {
+  background: #6690b9;
+}
+
+.promise .title {
+  color: #ffbe57;
+}
+
+/* ======= Board Section ======= */
+.Board {
+  background: #f5f5f5;
+}
+
+.Board .title {
+  color: #6690b9;
+}
+
+/* ======= Steps Sections ======= */
+.steps {
+  padding: 80px 0;
+  background-color: #f5f5f5;
+}
+
+.steps .intro {
+  margin-top: 0;
+  color: #6690b9;
+}
+
+.steps .title {
+  color: #ffbe57;
+}
+
+/* ======= Join Sections ======= */
+.join {
+  padding: 80px 0;
+  background-color: #ffbe57;
+}
+
+.join .intro {
+  margin-top: 0;
+  color: #6690b9;
+}
+
+/* ======= Finance Sections ======= */
+.finance {
+  padding: 80px 0;
+  background-color: #ffbe57;
+}
+
+.join .intro {
+  margin-top: 0;
+}
+
+/* ======= Documents Section ======= */
+.documents {
+  padding: 80px 0;
+  background-color: #ffbe57;
 }
 
 /* ======= Docs Section ======= */
@@ -466,8 +537,7 @@ pre code {
 
 /* ======= Donate Section ======= */
 .donate {
-  padding: 80px 0;
-  background: #f5f5f5;
+  padding: 40px 0;
 }
 
 .donate .title {
