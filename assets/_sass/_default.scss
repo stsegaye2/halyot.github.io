@@ -284,6 +284,9 @@ pre code {
 }
 
 /* ======= How did we get here Section ======= */
+.definition-2{
+  padding: 80px 0;
+}
 .definition-2 .title {
   color: darken($color-2, 10%);
   margin-top: 0;
@@ -426,6 +429,11 @@ pre code {
   background-color: $color-2;
 }
 
+/* ======= all Pictures ======= */
+.pictures {
+  max-width:100%;
+  height:auto;
+}
 /* ======= Docs Section ======= */
 .docs {
   padding: 80px 0;
