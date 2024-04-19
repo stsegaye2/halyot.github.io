@@ -240,71 +240,204 @@ pre code {
   position: relative;
   top: -5px;
 }
-/* ======= About Section ======= */
-.about {
+/* ======= Definition Section ======= */
+.definition {
   padding: 80px 0;
-  background: #f5f5f5;
+  background: $smoky-white;
 }
-.about .title {
+.definition .title {
   color: darken($color, 30%);
   margin-top: 0;
   margin-bottom: 60px;
 }
-.about .intro {
+.definition .intro {
   max-width: 800px;
   margin: 0 auto;
   margin-bottom: 60px;
 }
-.about .item {
+.definition .item {
   position: relative;
   margin-bottom: 30px;
 }
-.about .item .icon-holder {
+.definition .item .icon-holder {
   position: absolute;
   left: 30px;
   top: 0;
 }
-.about .item .icon-holder .fa {
+.definition .item .icon-holder .fa {
   font-size: 24px;
   color: darken($color, 30%);
 }
-.about .item .content {
+.definition .item .content {
   padding-left: 60px;
 }
-.about .item .content .sub-title {
+.definition .item .content .sub-title {
   margin-top: 0;
   color: darken($color, 30%);
   font-size: 18px;
 }
-/* ======= Join Section ======= */
-.join {
-  padding: 80px 0;
-  background: $color;
-  color: #fff;
-}
-.join .title {
+/* ======= what is Halyot Section ======= */
+.definition-1t .title {
   color: darken($color, 30%);
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
-.join a {
+
+/* ======= How did we get here Section ======= */
+.definition-2{
+  padding: 80px 0;
+}
+.definition-2 .title {
+  color: darken($color-2, 10%);
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+/* ======= Vision Section ======= */
+.vision {
+  padding: 80px 0;
+  background: $color-2;
+}
+.vision .intro {
+  margin-top: 0;
+  color:  darken($color, 30%)  !important;
+}
+.vision a {
   color: darken($color, 30%);
 }
-.join a:hover {
+.vision a:hover {
   color: darken($color, 40%);
 }
-.join .feature-list li {
+.vision .feature-list li {
   margin-bottom: 10px;
   color: darken($color, 30%);
 }
-.join .feature-list li .fa {
+.vision .feature-list li .fa {
   margin-right: 5px;
   color: #fff;
+}
+/* ======= Numbers Section ======= */
+.numbers {
+  padding: 80px 0;
+  background: $smoky-white;
+}
+.numbers .intro {
+  margin-top: 0;
+  color:  darken($color, 30%)  !important;
+}
+.numbers .title {
+  color:  $color;
+}
+.numbers .number {
+  color: darken($color-2, 15%)  !important;
+}
+
+/* ======= About page Sections ======= */
+.about {
+  padding: 80px 0;
+}
+.about .intro {
+  margin-top: 0;
+  color:  darken($color, 30%)  !important;
+}
+
+/* ======= Story Section ======= */
+.story {
+  background: $smoky-white;
+}
+.story .title {
+  color:  $color;
+}
+
+/* ======= Children Section ======= */
+.children {
+  background: $color-2;
+}
+.children .title {
+  color:  $color;
+}
+
+/* ======= Locations Section ======= */
+.locations {
+  background: $smoky-white;
+}
+.locations .title {
+  color:  $color;
+}
+
+/* ======= Locations Section ======= */
+.locations {
+  background: $smoky-white;
+}
+.locations .title {
+  color:  $color;
+}
+
+/* ======= Promise Section ======= */
+.promise {
+  background: $color;
+}
+.promise .title {
+  color:  $color-2;
+}
+
+/* ======= Board Section ======= */
+.Board {
+  background: $smoky-white;
+}
+.Board .title {
+  color:  $color;
+}
+
+
+/* ======= Steps Sections ======= */
+.steps {
+  padding: 80px 0;
+  background-color: $smoky-white;
+}
+.steps .intro {
+  margin-top: 0;
+  color:  $color;
+}
+.steps .title {
+  color: $color-2;
+}
+
+/* ======= Join Sections ======= */
+.join {
+  padding: 80px 0;
+  background-color: $color-2;
+}
+.join .intro {
+  margin-top: 0;
+  color:  $color;
+}
+
+/* ======= Finance Sections ======= */
+.finance {
+  padding: 80px 0;
+  background-color: $color-2;
+}
+
+
+.join .intro {
+  margin-top: 0;
+}
+
+/* ======= Documents Section ======= */
+.documents {
+  padding: 80px 0;
+  background-color: $color-2;
+}
+
+/* ======= all Pictures ======= */
+.pictures {
+  max-width:100%;
+  height:auto;
 }
 /* ======= Docs Section ======= */
 .docs {
   padding: 80px 0;
-  background: #f5f5f5;
+  background: $smoky-white;
 }
 .docs .title {
   color: darken($color, 30%);
@@ -341,10 +474,10 @@ pre code {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
+
 /* ======= Donate Section ======= */
 .donate {
-  padding: 80px 0;
-  background: #f5f5f5;
+  padding: 40px 0;
 }
 .donate .title {
   margin-top: 0;

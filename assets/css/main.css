@@ -277,79 +277,226 @@ pre code {
   top: -5px;
 }
 
-/* ======= About Section ======= */
-.about {
+/* ======= Definition Section ======= */
+.definition {
   padding: 80px 0;
   background: #f5f5f5;
 }
 
-.about .title {
+.definition .title {
   color: #2a435c;
   margin-top: 0;
   margin-bottom: 60px;
 }
 
-.about .intro {
+.definition .intro {
   max-width: 800px;
   margin: 0 auto;
   margin-bottom: 60px;
 }
 
-.about .item {
+.definition .item {
   position: relative;
   margin-bottom: 30px;
 }
 
-.about .item .icon-holder {
+.definition .item .icon-holder {
   position: absolute;
   left: 30px;
   top: 0;
 }
 
-.about .item .icon-holder .fa {
+.definition .item .icon-holder .fa {
   font-size: 24px;
   color: #2a435c;
 }
 
-.about .item .content {
+.definition .item .content {
   padding-left: 60px;
 }
 
-.about .item .content .sub-title {
+.definition .item .content .sub-title {
   margin-top: 0;
   color: #2a435c;
   font-size: 18px;
 }
 
-/* ======= Join Section ======= */
-.join {
-  padding: 80px 0;
-  background: #6690b9;
-  color: #fff;
-}
-
-.join .title {
+/* ======= what is Halyot Section ======= */
+.definition-1t .title {
   color: #2a435c;
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
-.join a {
+/* ======= How did we get here Section ======= */
+.definition-2 {
+  padding: 80px 0;
+}
+
+.definition-2 .title {
+  color: #ffaa24;
+  margin-top: 0;
+  margin-bottom: 60px;
+}
+
+/* ======= Vision Section ======= */
+.vision {
+  padding: 80px 0;
+  background: #ffbe57;
+}
+
+.vision .intro {
+  margin-top: 0;
+  color: #2a435c !important;
+}
+
+.vision a {
   color: #2a435c;
 }
 
-.join a:hover {
+.vision a:hover {
   color: #1a2a39;
 }
 
-.join .feature-list li {
+.vision .feature-list li {
   margin-bottom: 10px;
   color: #2a435c;
 }
 
-.join .feature-list li .fa {
+.vision .feature-list li .fa {
   margin-right: 5px;
   color: #fff;
+}
+
+/* ======= Numbers Section ======= */
+.numbers {
+  padding: 80px 0;
+  background: #f5f5f5;
+}
+
+.numbers .intro {
+  margin-top: 0;
+  color: #2a435c !important;
+}
+
+.numbers .title {
+  color: #6690b9;
+}
+
+.numbers .number {
+  color: #ffa00b !important;
+}
+
+/* ======= About page Sections ======= */
+.about {
+  padding: 80px 0;
+}
+
+.about .intro {
+  margin-top: 0;
+  color: #2a435c !important;
+}
+
+/* ======= Story Section ======= */
+.story {
+  background: #f5f5f5;
+}
+
+.story .title {
+  color: #6690b9;
+}
+
+/* ======= Children Section ======= */
+.children {
+  background: #ffbe57;
+}
+
+.children .title {
+  color: #6690b9;
+}
+
+/* ======= Locations Section ======= */
+.locations {
+  background: #f5f5f5;
+}
+
+.locations .title {
+  color: #6690b9;
+}
+
+/* ======= Locations Section ======= */
+.locations {
+  background: #f5f5f5;
+}
+
+.locations .title {
+  color: #6690b9;
+}
+
+/* ======= Promise Section ======= */
+.promise {
+  background: #6690b9;
+}
+
+.promise .title {
+  color: #ffbe57;
+}
+
+/* ======= Board Section ======= */
+.Board {
+  background: #f5f5f5;
+}
+
+.Board .title {
+  color: #6690b9;
+}
+
+/* ======= Steps Sections ======= */
+.steps {
+  padding: 80px 0;
+  background-color: #f5f5f5;
+}
+
+.steps .intro {
+  margin-top: 0;
+  color: #6690b9;
+}
+
+.steps .title {
+  color: #ffbe57;
+}
+
+/* ======= Join Sections ======= */
+.join {
+  padding: 80px 0;
+  background-color: #ffbe57;
+}
+
+.join .intro {
+  margin-top: 0;
+  color: #6690b9;
+}
+
+/* ======= Finance Sections ======= */
+.finance {
+  padding: 80px 0;
+  background-color: #ffbe57;
+}
+
+.join .intro {
+  margin-top: 0;
+}
+
+/* ======= Documents Section ======= */
+.documents {
+  padding: 80px 0;
+  background-color: #ffbe57;
+}
+
+/* ======= all Pictures ======= */
+.pictures {
+  max-width: 100%;
+  height: auto;
 }
 
 /* ======= Docs Section ======= */
@@ -400,8 +547,7 @@ pre code {
 
 /* ======= Donate Section ======= */
 .donate {
-  padding: 80px 0;
-  background: #f5f5f5;
+  padding: 40px 0;
 }
 
 .donate .title {
@@ -742,11 +888,6 @@ pre code {
 
 .donorbox {
   margin-top: 60px;
-}
-
-.join-us-intro {
-  margin-top: 0;
-  color: #ddd !important;
 }
 
 .highlight {
