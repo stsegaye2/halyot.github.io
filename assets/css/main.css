@@ -466,6 +466,21 @@ pre code {
   color: #ffbe57;
 }
 
+/* ======= Online-Donation Sections ======= */
+.online-donation {
+  padding: 80px 0;
+  background-color: #f5f5f5;
+}
+
+.online-donation .intro {
+  margin-top: 0;
+  color: #6690b9;
+}
+
+.online-donation .title {
+  color: #ffbe57;
+}
+
 /* ======= Join Sections ======= */
 .join {
   padding: 80px 0;
